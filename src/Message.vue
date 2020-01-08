@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>{{ message }}</h1>
-        <app-input></app-input>
+        <app-input :msg="message"></app-input>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
     export default {
         data() {
             return {
-                message: 'This is a great Message!'
+                message: 'Message From Message'
             }
         },
         components: {

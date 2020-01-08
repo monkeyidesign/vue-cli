@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>{{msg}}</p>
         <input type="text" v-model="message">
         <p>{{ message }}</p>
     </div>
