@@ -2,9 +2,6 @@
     <div>
         <h1>{{welcomeMsg}}</h1>
         <app-input :propsValue="parentMsg" @messageChanged="parentMsg = $event"></app-input>
-
-        <p>{{parentMsg}}</p>
-
     </div>
 </template>
 
