@@ -1,16 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+
 import Message from './Message.vue'
-
-// Vue.component('name', {
-//   data() {
-//     return {
-//       property: '',
-//     }
-//   },
-// });
-
-Vue.component('app-message',Message);
+Vue.component('app-own_message',Message);
 
 new Vue({
   el: '#app',

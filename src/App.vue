@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-      <app-message></app-message>
+      <app-own_message></app-own_message>
   </div>
 </template>
-test
+
 <script>
 export default {
   name: 'app',

@@ -1,27 +1,30 @@
 <template>
     <div>
-        <p>{{msg}}</p>
-<!--        <input type="text" v-model="message">-->
-        <input type="text" :value="msg" @input="updateMsg">
-        <p>{{ message }}</p>
+        <div class="container">
+<!--            <input type="text" v-bind:value="propsValue" v-on:input="changeMessage">-->
+            <input type="text" :value="propsValue" @input="changeMessage">
+            <p>{{parentMsg}}</p>
+
+
+        </div>
     </div>
 </template>
 
 <script>
+
     export default {
-        props:[
-            'msg',
-        ],
-        data() {
+        props:['propsValue'],
+        data(){
             return {
-                message: ''
+                parentMsg: ''
             }
         },
         methods:{
-          updateMsg(event){
-            this.message = event.target.value;
-            this.$emit('ownEventMessageChanged', this.message);
-          }
+            changeMessage(event){
+                this.parentMsg = event.target.value;
+                this.$emit('messageChanged', this.parentMsg)
+            }
         }
-    }
+    };
 </script>
+
